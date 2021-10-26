@@ -25,6 +25,7 @@ public class Dialog {
         list.printArray();
         list.deletePersonArray(0);
         list.printArray();
+        System.out.println("Equal z impelmentacją:"+person1.equals(person2));
         System.out.println("\nNaciśnij enter, aby kontynuować");
         try{System.in.read();}
         catch(Exception e){}
@@ -49,7 +50,7 @@ public class Dialog {
         map.addNewThingHash(person4);
         map.addNewThingHash(person5);
         map.printHash();
-        map.deletePersonHash(0);
+        map.deletePersonHash(0,person1);
         map.printHash();
         System.out.println("\nNaciśnij enter, aby kontynuować");
         try{System.in.read();}
@@ -62,7 +63,7 @@ public class Dialog {
         map.addNewThingTree(person4);
         map.addNewThingTree(person5);
         map.printTree();
-        map.deletePersonTree(0);
+        map.deletePersonTree(0,person1);
         map.printTree();
         System.out.println("\nNaciśnij enter, aby kontynuować");
         try{System.in.read();}
@@ -92,17 +93,4 @@ public class Dialog {
         set.printHash();
     }
 
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Dialog dialog = (Dialog) o;
-        return person1.equals(dialog.person1) && person2.equals(dialog.person2) && person3.equals(dialog.person3) && person4.equals(dialog.person4) && person5.equals(dialog.person5);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(person1, person2, person3, person4, person5);
-    }
 }

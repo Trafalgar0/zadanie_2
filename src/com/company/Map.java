@@ -15,10 +15,11 @@ public class Map {
         i++;
     }
 
-    public void deletePersonHash(int a)//metoda usuwająca element o indeksie a
+    public void deletePersonHash(int a, Person person)//metoda usuwająca element o indeksie a
     {
-        hashMap.remove(a);
-        System.out.println("\n\nUsuwam osobe z object kay: "+a+"\n");
+        hashMap.remove(a, person);
+        System.out.println("\n\nUsuwam osobe: ");
+        System.out.println(person.getFirstname()+" "+person.getLastname()+" "+person.getJob()+" "+person.getAge()+"\n");
     }
 
     public void printHash()//metoda wyswietlajaca kolekcję
@@ -42,10 +43,11 @@ public class Map {
         j++;
     }
 
-    public void deletePersonTree(int a)//metoda usuwająca element o indeksie a
+    public void deletePersonTree(int a, Person person)//metoda usuwająca element o indeksie a
     {
-        treeMap.remove(a);
-        System.out.println("\n\nUsuwam osobe z object kay: "+a+"\n");
+        treeMap.remove(a, person);
+        System.out.println("\n\nUsuwam osobe: ");
+        System.out.println(person.getFirstname()+" "+person.getLastname()+" "+person.getJob()+" "+person.getAge()+"\n");
     }
 
     public void printTree()//metoda wyswietlajaca kolekcję
