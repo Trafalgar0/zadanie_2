@@ -25,7 +25,6 @@ public class Dialog {
         list.printArray();
         list.deletePersonArray(0);
         list.printArray();
-        System.out.println("Equal z impelmentacją:"+person1.equals(person2));
         System.out.println("\nNaciśnij enter, aby kontynuować");
         try{System.in.read();}
         catch(Exception e){}
@@ -92,5 +91,5 @@ public class Dialog {
         set.deletePersonHash(person1);
         set.printHash();
     }
+    }
 
-}
